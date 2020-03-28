@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Third Party Applications &mdash; Streamlink 0.6.0+1146.g9206161 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.6.0+1146.g9206161',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Streamlink Applications" href="applications.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Streamlink
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin_matrix.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="players.html">Players</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">Common issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_guide.html">API Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donate.html">Donating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">Streamlink Applications</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Third Party Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#liveproxy">LiveProxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wtwitch">Wtwitch</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Streamlink</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Third Party Applications</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <style>
+    .rst-content table.field-list td {
+        padding-top: 8px;
+    }
+</style><div class="section" id="third-party-applications">
+<h1>Third Party Applications<a class="headerlink" href="#third-party-applications" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="liveproxy">
+<h2>LiveProxy<a class="headerlink" href="#liveproxy" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Description:</th><td class="field-body">Local proxy server between Streamlink and an URL</td>
+</tr>
+<tr class="field-even field"><th class="field-name">OS:</th><td class="field-body"><i class="fa fa-fw fa-windows"></i> <i class="fa fa-fw fa-apple"></i> <i class="fa fa-fw fa-linux"></i></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body"><a class="reference external" href="https://github.com/back-to">back-to</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Website:</th><td class="field-body"><a class="reference external" href="https://liveproxy.github.io">https://liveproxy.github.io</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Source code:</th><td class="field-body"><a class="reference external" href="https://github.com/back-to/liveproxy">https://github.com/back-to/liveproxy</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Info:</th><td class="field-body">LiveProxy allows Streamlink to be easy accessible from <strong>m3u</strong> playlists, <br />
+it is also available for <strong>Kodi Leia</strong> and <strong>Enigma2</strong> devices. <br />
+A detailed guide can be found on the website.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="wtwitch">
+<h2>Wtwitch<a class="headerlink" href="#wtwitch" title="Permalink to this headline">¶</a></h2>
+<img alt="Wtwitch screenshot of checking subscriptions" class="align-center" src="https://i.imgur.com/oaxH3ss.jpg" />
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Description:</th><td class="field-body">Browse Twitch streams; subscribe to streamers locally without an account</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">TUI (terminal user interface)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">OS:</th><td class="field-body"><i class="fa fa-fw fa-linux"></i></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Author:</th><td class="field-body"><a class="reference external" href="https://git.sr.ht/~krathalan/">krathalan</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Website:</th><td class="field-body"><a class="reference external" href="https://git.sr.ht/~krathalan/wtwitch">https://git.sr.ht/~krathalan/wtwitch</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Info:</th><td class="field-body">wtwitch is a Bash program that lets you browse the top games on Twitch, the <br />
+top streamers for a given game, and lets you check the status of streamers you <br />
+subscribe to. Open streams easily with settings that save your preferred quality <br />
+and player. A man page comes with the AUR package or can be compiled manually.</td>
+</tr>
+</tbody>
+</table>
+<p>Help us extend this list by sending us a pull request on Github. Thanks!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="applications.html" class="btn btn-neutral float-left" title="Streamlink Applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Streamlink
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

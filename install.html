@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; Streamlink 0.6.0+1146.g9206161 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'0.6.0+1146.g9206161',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Command-Line Interface" href="cli.html" />
+    <link rel="prev" title="Overview" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Streamlink
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macos">macOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linux-and-bsd">Linux and BSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#package-maintainers">Package maintainers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-code">Source code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#virtual-environment">Virtual environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-pycrypto-and-pycountry">Using pycrypto and pycountry</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#windows-binaries">Windows binaries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows-portable-version">Windows portable version</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin_matrix.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="players.html">Players</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">Common issues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_guide.html">API Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="donate.html">Donating</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">Streamlink Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="thirdparty.html">Third Party Applications</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Streamlink</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="install"></span><div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-custom-layout docutils">
+<colgroup>
+<col width="42%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method</th>
+<th class="head">Installing</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Installers</td>
+<td>See the <a class="reference internal" href="#windows-binaries">Windows binaries</a> section below</td>
+</tr>
+<tr class="row-odd"><td>Portable</td>
+<td>See the <a class="reference internal" href="#windows-portable-version">Windows portable version</a> section below</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://chocolatey.org/packages/streamlink">Chocolatey</a></td>
+<td><div class="first highlight-bat"><div class="highlight"><pre><span></span>choco install streamlink
+</pre></div>
+</div>
+<p class="last"><a class="reference external" href="https://chocolatey.org">Installing Chocolatey packages</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="macos">
+<h2>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-custom-layout docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Method</th>
+<th class="head">Installing</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Easy install</td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>sudo easy_install -U streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/streamlink.rb">Homebrew</a></td>
+<td><div class="first highlight-bash"><div class="highlight"><pre><span></span>brew install streamlink
+</pre></div>
+</div>
+<p class="last"><a class="reference external" href="https://brew.sh">Installing Homebrew packages</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="linux-and-bsd">
+<h2>Linux and BSD<a class="headerlink" href="#linux-and-bsd" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-custom-layout docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Distribution</th>
+<th class="head">Installing</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://www.archlinux.org/packages/community/any/streamlink/">Arch Linux</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>sudo pacman -S streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://aur.archlinux.org/packages/streamlink-git/">Arch Linux (aur, git)</a></td>
+<td><div class="first highlight-bash"><div class="highlight"><pre><span></span>git clone https://aur.archlinux.org/streamlink-git.git
+<span class="nb">cd</span> streamlink-git
+makepkg -si
+</pre></div>
+</div>
+<p class="last"><a class="reference external" href="https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages">Installing AUR packages</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://packages.debian.org/unstable/streamlink">Debian (sid, testing)</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>sudo apt update
+sudo apt install streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://bintray.com/amurzeau/streamlink-debian/streamlink">Debian (stable)</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>wget -qO- <span class="s2">&quot;https://bintray.com/user/downloadSubjectPublicKey?username=amurzeau&quot;</span> <span class="p">|</span> sudo apt-key add -
+<span class="nb">echo</span> <span class="s2">&quot;deb https://dl.bintray.com/amurzeau/streamlink-debian stretch-backports main&quot;</span> <span class="p">|</span> sudo tee <span class="s2">&quot;/etc/apt/sources.list.d/streamlink.list&quot;</span>
+sudo apt update
+sudo apt install streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://apps.fedoraproject.org/packages/python-streamlink">Fedora</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>sudo dnf install streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://packages.gentoo.org/package/net-misc/streamlink">Gentoo Linux</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>sudo emerge net-misc/streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://pkgsrc.se/multimedia/streamlink">NetBSD (pkgsrc)</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> /usr/pkgsrc/multimedia/streamlink
+sudo make install clean
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/NixOS/nixpkgs/tree/master/pkgs/applications/video/streamlink">NixOS</a></td>
+<td><div class="first highlight-bash"><div class="highlight"><pre><span></span>nix-env -iA nixos.streamlink
+</pre></div>
+</div>
+<p class="last"><a class="reference external" href="https://nixos.org/nixos/packages.html#streamlink">NixOS channel</a></p>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://openports.se/multimedia/streamlink">OpenBSD</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>doas pkg_add streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://dev.solus-project.com/source/streamlink/">Solus</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>sudo eopkg install streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu/pool/main/s/streamlink/">Ubuntu</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt update
+sudo apt install streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/void-linux/void-packages/tree/master/srcpkgs/streamlink">Void</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span>sudo xbps-install streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="package-maintainers">
+<h2>Package maintainers<a class="headerlink" href="#package-maintainers" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-custom-layout docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Distribution/Platform</th>
+<th class="head">Maintainer</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Arch</td>
+<td>Giancarlo Razzolini &lt;grazzolini at archlinux.org&gt;</td>
+</tr>
+<tr class="row-odd"><td>Arch (aur, git)</td>
+<td>Josip Ponjavic &lt;josipponjavic at gmail.com&gt;</td>
+</tr>
+<tr class="row-even"><td>Chocolatey</td>
+<td>Scott Walters &lt;me at scowalt.com&gt;</td>
+</tr>
+<tr class="row-odd"><td>Debian</td>
+<td>Alexis Murzeau &lt;amubtdx at gmail.com&gt;</td>
+</tr>
+<tr class="row-even"><td>Fedora</td>
+<td>Mohamed El Morabity &lt;melmorabity at fedoraproject.org&gt;</td>
+</tr>
+<tr class="row-odd"><td>Gentoo</td>
+<td>soredake &lt;fdsfgs at krutt.org&gt;</td>
+</tr>
+<tr class="row-even"><td>NetBSD</td>
+<td>Maya Rashish &lt;maya at netbsd.org&gt;</td>
+</tr>
+<tr class="row-odd"><td>NixOS</td>
+<td>Tuomas Tynkkynen &lt;tuomas.tynkkynen at iki.fi&gt;</td>
+</tr>
+<tr class="row-even"><td>OpenBSD</td>
+<td>Brian Callahan &lt;bcallah at openbsd.org&gt;</td>
+</tr>
+<tr class="row-odd"><td>Solus</td>
+<td>Bryan T. Meyers &lt;bmeyers at datadrake.com&gt;</td>
+</tr>
+<tr class="row-even"><td>Ubuntu</td>
+<td>Alin Andrei &lt;andrew at webupd8.org&gt;</td>
+</tr>
+<tr class="row-odd"><td>Void</td>
+<td>wkuipers &lt;wietse at kuiprs.nl&gt;</td>
+</tr>
+<tr class="row-even"><td>Windows binaries</td>
+<td>beardypig &lt;beardypig at protonmail.com&gt;</td>
+</tr>
+<tr class="row-odd"><td>Windows port. version</td>
+<td>RosadinTV &lt;RosadinTV at outlook.com&gt; <br />
+beardypig &lt;beardypig at protonmail.com&gt;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="source-code">
+<h2>Source code<a class="headerlink" href="#source-code" title="Permalink to this headline">¶</a></h2>
+<p>If a package is not available on your platform (or if it's out of date), Streamlink can be installed from source.</p>
+<p>This can be done in a couple of different ways, for example by using <a class="reference external" href="https://pip.readthedocs.org/en/latest/installing.html">pip</a>, the Python package manager,
+or by checking out the source code with <a class="reference external" href="https://git-scm.com/">git</a> and installing it via setuptools. <br />
+Using <strong class="command">easy_install</strong> is no longer recommended.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>On some Linux distributions, the Python headers package needs to be installed before installing Streamlink
+(<code class="docutils literal"><span class="pre">python-devel</span></code> on RedHat, Fedora, etc.).</p>
+<p class="last">Ensure that you are using an up-to-date version of <a class="reference external" href="https://pip.readthedocs.org/en/latest/installing.html">pip</a>. At least version <strong>6</strong> is required.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>On Linux, when not using a virtual environment, it is recommended to install custom python packages like this
+only for the current user (see the <code class="docutils literal"><span class="pre">--user</span></code> parameter below), since system-wide packages can cause conflicts with
+the system's regular package manager.</p>
+<p>Those user-packages will be installed into <code class="docutils literal"><span class="pre">~/.local</span></code> instead of <code class="docutils literal"><span class="pre">/usr</span></code> and entry-scripts for
+running the programs can be found in <code class="docutils literal"><span class="pre">~/.local/bin</span></code>, eg. <code class="docutils literal"><span class="pre">~/.local/bin/streamlink</span></code>.</p>
+<p class="last">In order for the command line shell to be able to find these executables, the user's <code class="docutils literal"><span class="pre">PATH</span></code> environment variable
+needs to be extended. This can be done by adding <code class="docutils literal"><span class="pre">export</span> <span class="pre">PATH=&quot;${HOME}/.local/bin:${PATH}&quot;</span></code>
+to <code class="docutils literal"><span class="pre">~/.profile</span></code> or <code class="docutils literal"><span class="pre">~/.bashrc</span></code>.</p>
+</div>
+<table border="1" class="table-custom-layout docutils">
+<colgroup>
+<col width="31%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Version</th>
+<th class="head">Installing</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://pypi.python.org/pypi/streamlink">Latest release (pip)</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Current user</span>
+pip install --upgrade --user streamlink
+
+<span class="c1"># System wide</span>
+sudo pip install --upgrade streamlink
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/streamlink/streamlink">Development version (pip)</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Current user</span>
+pip install --upgrade --user git+https://github.com/streamlink/streamlink.git
+
+<span class="c1"># System wide</span>
+sudo pip install --upgrade git+https://github.com/streamlink/streamlink.git
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/streamlink/streamlink">Development version (git)</a></td>
+<td><div class="first last highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Current user</span>
+git clone https://github.com/streamlink/streamlink.git
+<span class="nb">cd</span> streamlink
+python setup.py install --user
+
+<span class="c1"># System wide</span>
+git clone https://github.com/streamlink/streamlink.git
+<span class="nb">cd</span> streamlink
+sudo python setup.py install
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="virtual-environment">
+<h3>Virtual environment<a class="headerlink" href="#virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>Another method of installing Streamlink in a non-system-wide way is
+using <a class="reference external" href="https://virtualenv.readthedocs.io/en/latest/">virtualenv</a>, which creates a user owned Python environment instead.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Create a new environment</span>
+virtualenv ~/myenv
+
+<span class="c1"># Activate the environment</span>
+<span class="nb">source</span> ~/myenv/bin/activate
+
+<span class="c1"># Install Streamlink in the environment</span>
+pip install --upgrade streamlink
+
+<span class="c1"># Use Streamlink in the environment</span>
+streamlink ...
+
+<span class="c1"># Deactivate the environment</span>
+deactivate
+
+<span class="c1"># Use Streamlink without activating the environment</span>
+~/myenv/bin/streamlink ...
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This may also be required on some macOS versions that seem to have weird
+permission issues.</p>
+</div>
+</div>
+<div class="section" id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h3>
+<p>To install Streamlink from source you will need these dependencies.</p>
+<table border="1" class="table-custom-layout docutils">
+<colgroup>
+<col width="37%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://www.python.org/">Python</a></td>
+<td>At least version <strong>2.7</strong> or <strong>3.5</strong>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://pypi.org/project/setuptools/">python-setuptools</a></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td colspan="2"><strong>Automatically installed by the setup script</strong></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://pypi.org/project/futures/">python-futures</a></td>
+<td>Only needed on Python <strong>2.7</strong>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://python-requests.org/">python-requests</a></td>
+<td>At least version <strong>2.21.0</strong>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://pypi.org/project/singledispatch/">python-singledispatch</a></td>
+<td>Only needed on Python <strong>2.7</strong>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://pycryptodome.readthedocs.io/en/latest/">pycryptodome</a></td>
+<td>Required to play some encrypted streams</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://pypi.org/project/iso-639/">iso-639</a></td>
+<td>Used for localization settings, provides language information</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://pypi.org/project/iso3166/">iso3166</a></td>
+<td>Used for localization settings, provides country information</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://pypi.org/project/isodate/">isodate</a></td>
+<td>Used for MPEG-DASH streams</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/Anorov/PySocks">PySocks</a></td>
+<td>Used for SOCKS Proxies</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://pypi.org/project/websocket-client/">websocket-client</a></td>
+<td>Used for some plugins</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://pypi.org/project/backports.shutil_get_terminal_size/">shutil_get_terminal_size</a></td>
+<td>Only needed on Python <strong>2.7</strong>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://pypi.org/project/backports.shutil_which/">shutil_which</a></td>
+<td>Only needed on Python <strong>2.7</strong>.</td>
+</tr>
+<tr class="row-even"><td colspan="2"><strong>Optional</strong></td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://rtmpdump.mplayerhq.hu/">RTMPDump</a></td>
+<td>Required to play RTMP streams.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://www.ffmpeg.org/">ffmpeg</a></td>
+<td>Required to play streams that are made up of separate
+audio and video streams, eg. YouTube 1080p+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="using-pycrypto-and-pycountry">
+<h3>Using pycrypto and pycountry<a class="headerlink" href="#using-pycrypto-and-pycountry" title="Permalink to this headline">¶</a></h3>
+<p>With these two environment variables it is possible to use <a class="reference external" href="https://www.dlitz.net/software/pycrypto/">pycrypto</a> instead of
+<a class="reference external" href="https://pycryptodome.readthedocs.io/en/latest/">pycryptodome</a> and <a class="reference external" href="https://pypi.org/project/pycountry/">pycountry</a> instead of <a class="reference external" href="https://pypi.org/project/iso-639/">iso-639</a> and <a class="reference external" href="https://pypi.org/project/iso3166/">iso3166</a>.</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">export</span> <span class="nv">STREAMLINK_USE_PYCRYPTO</span><span class="o">=</span><span class="s2">&quot;true&quot;</span>
+<span class="gp">$</span> <span class="nb">export</span> <span class="nv">STREAMLINK_USE_PYCOUNTRY</span><span class="o">=</span><span class="s2">&quot;true&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="windows-binaries">
+<h2>Windows binaries<a class="headerlink" href="#windows-binaries" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Windows XP is not supported. <br />
+Windows Vista requires at least SP2 to be installed.</p>
+</div>
+<table border="1" class="table-custom-layout docutils">
+<colgroup>
+<col width="36%" />
+<col width="64%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Release</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://github.com/streamlink/streamlink/releases/latest">Stable release</a></td>
+<td>Download the installer from the <a class="reference external" href="https://github.com/streamlink/streamlink/releases/latest">GitHub releases page</a>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://bintray.com/streamlink/streamlink-nightly/streamlink/_latestVersion/#files">Development build</a></td>
+<td>For testing purposes only! Updated once per day. <br />
+Download the installer from <a class="reference external" href="https://bintray.com/streamlink/streamlink-nightly/streamlink/_latestVersion/#files">Bintray</a>. <br />
+See the <a class="reference external" href="https://bintray.com/streamlink/streamlink-nightly/streamlink/_latestVersion/#release">list of recent changes</a> since the last stable release.</td>
+</tr>
+</tbody>
+</table>
+<p>These installers contain:</p>
+<ul class="simple">
+<li>A compiled version of Streamlink that <strong>does not require an existing Python
+installation</strong></li>
+<li><a class="reference external" href="http://rtmpdump.mplayerhq.hu/">RTMPDump</a> for viewing RTMP streams</li>
+<li><a class="reference external" href="https://www.ffmpeg.org/">ffmpeg</a> for muxing streams</li>
+</ul>
+<p>and perform the following tasks:</p>
+<ul class="simple">
+<li>Add Streamlink to the system's list of installed applications. <br />
+An uninstaller will automatically be created during installation.</li>
+<li>Add Streamlink's installation directory to the system's <code class="docutils literal"><span class="pre">PATH</span></code> environment variable. <br />
+This allows the user to run the <code class="docutils literal"><span class="pre">streamlink</span></code> command globally
+from the command prompt or powershell without specifying its directory.</li>
+</ul>
+<p>To build the installer on your own, <code class="docutils literal"><span class="pre">NSIS</span></code> and <code class="docutils literal"><span class="pre">pynsist</span></code> need to be installed.</p>
+<div class="section" id="windows-portable-version">
+<h3>Windows portable version<a class="headerlink" href="#windows-portable-version" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="table-custom-layout docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Maintainer</th>
+<th class="head">Links</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>RosadinTV</td>
+<td><a class="reference external" href="https://github.com/streamlink/streamlink-portable/releases/latest">Latest precompiled stable release</a> <br />
+<a class="reference external" href="https://github.com/streamlink/streamlink-portable/archive/master.zip">Latest builder</a> <br />
+<a class="reference external" href="https://github.com/streamlink/streamlink-portable">More info</a></td>
+</tr>
+<tr class="row-odd"><td>Beardypig</td>
+<td><a class="reference external" href="https://github.com/beardypig/streamlink-portable/releases/latest">Latest precompiled stable release</a> <br />
+<a class="reference external" href="https://github.com/beardypig/streamlink-portable/archive/master.zip">Latest builder</a> <br />
+<a class="reference external" href="https://github.com/beardypig/streamlink-portable">More info</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cli.html" class="btn btn-neutral float-right" title="Command-Line Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Streamlink
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
