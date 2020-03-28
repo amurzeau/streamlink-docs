@@ -1,0 +1,18 @@
+/* fix table layout on the install page */
+table.table-custom-layout {
+  table-layout: fixed;
+}
+table.table-custom-layout colgroup {
+  display: none;
+}
+table.table-custom-layout colgroup col {
+  width: auto;
+}
+table.table-custom-layout th:first-of-type {
+  width: 12rem;
+}
+table.table-custom-layout tbody tr td {
+  overflow: unset;
+  white-space: unset;
+}
+
